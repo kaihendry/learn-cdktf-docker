@@ -8,8 +8,7 @@ if ! command -v uv &>/dev/null; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-uv tool install pre-commit --with pre-commit-uv
-
-pre-commit install --install-hooks
+# uv tool install pre-commit --with pre-commit-uv
+# pre-commit install --install-hooks
 
 git config --global --add --bool push.autoSetupRemote true
