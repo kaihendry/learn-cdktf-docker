@@ -12,3 +12,12 @@ fi
 # pre-commit install --install-hooks
 
 git config --global --add --bool push.autoSetupRemote true
+
+# Display authentication status
+echo "=== Authentication Status ==="
+echo "AWS: Run '.devcontainer/scripts/aws-auth.sh' to authenticate"
+
+# Display container information if available
+if command -v devcontainer-info &> /dev/null; then
+    devcontainer-info
+fi
